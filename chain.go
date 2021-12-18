@@ -14,6 +14,7 @@ func (bc *Blockchain) AddBlock(data string) {
 	prevBlockHash := bc.hashes[len(bc.hashes)-1]
 	prevBlock := bc.blocks[string(prevBlockHash)]
 	newBlock := NewBlock(data, prevBlock.Hash)
+	bc.hashes = append(bc.hashes, newBlock.Hash)
 	bc.blocks[string(newBlock.Hash)] = newBlock
 }
 
