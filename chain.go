@@ -29,7 +29,7 @@ func (bc *Blockchain) GetBlocks() []*Block {
 	return blocks
 }
 
-//NewGenesis creates the very first block in the blockchain.
+//NewGenesisBlock creates the very first block in the blockchain.
 func NewGenesisBlock() *Block {
 	return NewBlock("Genesis Block", []byte{})
 }
